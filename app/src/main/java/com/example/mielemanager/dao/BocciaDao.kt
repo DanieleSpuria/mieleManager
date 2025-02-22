@@ -9,11 +9,11 @@ import com.example.mielemanager.model.Boccia
 interface BocciaDao {
 
     @Insert
-    suspend fun insert(boccia: Boccia)
+    fun insert(boccia: Boccia)
 
     @Query("SELECT * FROM tappo WHERE id = :id")
-    suspend fun getBocciaById(id: Int): Boccia?
+    fun getBocciaById(id: Int): Boccia?
 
     @Query("SELECT * FROM boccia")
-    suspend fun getAllBocce(): List<Boccia>
+    fun getAllBocce(): List<Boccia>
 }

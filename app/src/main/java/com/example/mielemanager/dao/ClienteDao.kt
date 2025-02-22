@@ -9,11 +9,11 @@ import com.example.mielemanager.model.Cliente
 interface ClienteDao {
 
     @Insert
-    suspend fun insert(cliente: Cliente)
+    fun insert(cliente: Cliente)
 
     @Query("SELECT * FROM cliente WHERE id = :id")
-    suspend fun getClienteById(id: Int): Cliente?
+    fun getClienteById(id: Int): Cliente?
 
     @Query("SELECT * FROM cliente")
-    suspend fun getAllMiele(): List<Cliente>
+    fun getAllMiele(): List<Cliente>
 }

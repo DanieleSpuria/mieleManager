@@ -9,11 +9,11 @@ import com.example.mielemanager.model.Ordine
 interface OrdineDao {
 
     @Insert
-    suspend fun insert(ordine: Ordine)
+    fun insert(ordine: Ordine)
 
     @Query("SELECT * FROM ordine WHERE id = :id")
-    suspend fun getOrdineById(id: Int): Ordine?
+    fun getOrdineById(id: Int): Ordine?
 
     @Query("SELECT * FROM ordine")
-    suspend fun getAllOrdini(): List<Ordine>
+    fun getAllOrdini(): List<Ordine>
 }

@@ -9,11 +9,11 @@ import com.example.mielemanager.model.Tappo
 interface TappoDao {
 
     @Insert
-    suspend fun insert(tappo: Tappo)
+    fun insert(tappo: Tappo)
 
     @Query("SELECT * FROM tappo WHERE id = :id")
-    suspend fun getMieleById(id: Int): Tappo?
+    fun getMieleById(id: Int): Tappo?
 
     @Query("SELECT * FROM tappo")
-    suspend fun getallTappi(): List<Tappo>
+    fun getallTappi(): List<Tappo>
 }
